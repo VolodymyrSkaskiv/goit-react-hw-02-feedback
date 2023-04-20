@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import css from './Feedback.module.css';
+import css from './FeedbackOptions.module.css';
 
-export const Feedback = ({ onLeavefeedback, options }) => {
+export const FeedbackOptions = ({ onLeavefeedback, options }) => {
   return (
     <div className={css.wrap}>
       {options.map((name, i) => {
@@ -22,7 +22,7 @@ export const Feedback = ({ onLeavefeedback, options }) => {
   );
 };
 
-Feedback.propTypes = {
+FeedbackOptions.propTypes = {
   onLeavefeedback: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.oneOf(['good', 'neutral', 'bad']))
     .isRequired,
